@@ -109,6 +109,8 @@ public class Controlador implements ActionListener{
 		this.vista.btnEliminarInventario.addActionListener(this);
 		this.vista.btnVolverMesas.addActionListener(this);
 		this.vista.comboBoxNombreProducto.addActionListener(this);
+		this.vista.btnVolverMesaBebida.addActionListener(this);
+		this.vista.btnVolver.addActionListener(this);
 		ponerImagen();
 		hora(this.vista.lblHora);
 		hora(this.vista.lblHora1);
@@ -765,7 +767,7 @@ public class Controlador implements ActionListener{
 						this.vista.lblFalloPanelUsuario.setText("Este usuario ya existe");
 					}else if(totalempleados.get(i).getContraseña().equals(this.vista.textFieldInicioSesion.getText())) {
 						this.vista.lblFalloPanelUsuario.setText("Esta contraseña ya existe");						
-					}else if(this.vista.textFieldInicioSesion.getText()==null&& this.vista.textFieldContraseña.getText()==null){
+					}else if(this.vista.textFieldInicioSesion.getText().isEmpty() && this.vista.textFieldContraseña.getText().isEmpty()){
 						this.vista.lblFalloPanelUsuario.setText("Campos vacios");
 					}else {
 						agregarNuevoUsuario(this.vista.textFieldPanelNombreUsuario.getText(),this.vista.textFieldPanelContraseña.getText());
@@ -773,9 +775,12 @@ public class Controlador implements ActionListener{
 						this.vista.panelnicio.setVisible(true);
 						 this.vista.textFieldPanelNombreUsuario.setText("");
 						 this.vista.textFieldPanelContraseña.setText("");
-					}
-					
+					}	
 				}
+		    }
+		    if(e.getSource()==this.vista.btnVolver) {
+		    	this.vista.panelnicio.setVisible(true);
+		    	this.vista.panelCrearUsuario.setVisible(false);
 		    }
 		    if(e.getSource()==this.vista.btnInventarioComida) {
 		    	this.vista.panelMesa.setVisible(false);
@@ -783,7 +788,7 @@ public class Controlador implements ActionListener{
 		    }
 		    if(e.getSource()==this.vista.btnAñadirInventario) {
 		    	añadirinventario();
-		    	
+
 		   }
 		    if(e.getSource()==this.vista.btnEliminarInventario) {
 		    	eliminarinventario();

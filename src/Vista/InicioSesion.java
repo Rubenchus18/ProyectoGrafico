@@ -138,6 +138,7 @@ public class InicioSesion extends JFrame {
 	public JButton btnEliminarInventario;
 	public JButton btnVolverMesas;
 	public JLabel lblFondoInventario;
+	public JButton btnVolver;
 	/**
 	 * Launch the application.
 	 */
@@ -167,6 +168,123 @@ public class InicioSesion extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+															
+															panelCrearUsuario = new JPanel();
+															panelCrearUsuario.setLayout(null);
+															panelCrearUsuario.setBackground(new Color(255, 255, 128));
+															panelCrearUsuario.setBounds(0, 0, 834, 564);
+															contentPane.add(panelCrearUsuario);
+															panelCrearUsuario.setVisible(false);
+															
+															btnVolver = new JButton("Volver");
+															btnVolver.addActionListener(new ActionListener() {
+																public void actionPerformed(ActionEvent e) {
+																}
+															});
+															btnVolver.setBackground(new Color(128, 255, 128));
+															btnVolver.setBounds(717, 0, 117, 57);
+															panelCrearUsuario.add(btnVolver);
+															textFieldPanelNombreUsuario = new JTextField();
+															textFieldPanelNombreUsuario.setColumns(10);
+															textFieldPanelNombreUsuario.setBounds(268, 190, 308, 19);
+															panelCrearUsuario.add(textFieldPanelNombreUsuario);
+															
+															lblNombreUsuario = new JLabel("Nombre Usuario");
+															lblNombreUsuario.setFont(new Font("Tahoma", Font.ITALIC, 15));
+															lblNombreUsuario.setBounds(268, 167, 308, 13);
+															panelCrearUsuario.add(lblNombreUsuario);
+															
+															textFieldPanelContraseña = new JTextField();
+															textFieldPanelContraseña.setColumns(10);
+															textFieldPanelContraseña.setBounds(268, 275, 308, 19);
+															panelCrearUsuario.add(textFieldPanelContraseña);
+															
+															lblNewLabel_19 = new JLabel("Contraseña");
+															lblNewLabel_19.setFont(new Font("Tahoma", Font.ITALIC, 15));
+															lblNewLabel_19.setBounds(268, 252, 308, 13);
+															panelCrearUsuario.add(lblNewLabel_19);
+															
+															btnUsuario = new JButton("Añadir  Usuario");
+															btnUsuario.addActionListener(new ActionListener() {
+																public void actionPerformed(ActionEvent e) {
+																}
+															});
+															btnUsuario.setBackground(new Color(128, 255, 128));
+															btnUsuario.setBounds(351, 333, 145, 21);
+															panelCrearUsuario.add(btnUsuario);
+															
+															lblName_4 = new JLabel("CoffeSwtich");
+															lblName_4.setFont(new Font("Rage Italic", Font.PLAIN, 60));
+															lblName_4.setBounds(139, 32, 425, 76);
+															panelCrearUsuario.add(lblName_4);
+															
+															lblHora_1 = new JLabel("");
+															lblHora_1.setFont(new Font("Rage Italic", Font.PLAIN, 60));
+															lblHora_1.setBounds(452, 32, 290, 76);
+															panelCrearUsuario.add(lblHora_1);
+															
+															lblFalloPanelUsuario = new JLabel("");
+															lblFalloPanelUsuario.setHorizontalAlignment(SwingConstants.CENTER);
+															lblFalloPanelUsuario.setFont(new Font("Rage Italic", Font.PLAIN, 25));
+															lblFalloPanelUsuario.setBounds(10, 426, 824, 76);
+															panelCrearUsuario.add(lblFalloPanelUsuario);
+															
+															lblFondoPanelUsuario = new JLabel("");
+															lblFondoPanelUsuario.setBounds(0, -44, 834, 653);
+															panelCrearUsuario.add(lblFondoPanelUsuario);
+															
+															panelnvetarioComida = new JPanel();
+															panelnvetarioComida.setBounds(0, 0, 834, 553);
+															contentPane.add(panelnvetarioComida);
+															panelnvetarioComida.setLayout(null);
+															panelnvetarioComida.setVisible(false);
+															lblNewLabel_18 = new JLabel("Nombre Prodcuto");
+															lblNewLabel_18.setFont(new Font("Rage Italic", Font.PLAIN, 54));
+															lblNewLabel_18.setBounds(151, 120, 580, 76);
+															panelnvetarioComida.add(lblNewLabel_18);
+															
+															comboBoxNombreProducto = new JComboBox();
+															comboBoxNombreProducto.setBounds(161, 195, 523, 29);
+															panelnvetarioComida.add(comboBoxNombreProducto);
+															
+															lblNewLabel_20 = new JLabel("Cantidad");
+															lblNewLabel_20.setFont(new Font("Rage Italic", Font.PLAIN, 54));
+															lblNewLabel_20.setBounds(151, 255, 580, 76);
+															panelnvetarioComida.add(lblNewLabel_20);
+															
+															textFieldCantidad = new JTextField();
+															textFieldCantidad.setBounds(161, 341, 523, 19);
+															panelnvetarioComida.add(textFieldCantidad);
+															textFieldCantidad.setColumns(10);
+															
+															btnAñadirInventario = new JButton("Añadir");
+															btnAñadirInventario.setBackground(new Color(128, 255, 128));
+															btnAñadirInventario.setBounds(162, 408, 249, 21);
+															panelnvetarioComida.add(btnAñadirInventario);
+															
+															btnEliminarInventario = new JButton("Eliminar");
+															btnEliminarInventario.setBackground(new Color(128, 255, 128));
+															btnEliminarInventario.setBounds(459, 408, 225, 21);
+															panelnvetarioComida.add(btnEliminarInventario);
+															
+															 btnVolverMesas = new JButton("Mesas");
+															 btnVolverMesas.addActionListener(new ActionListener() {
+															 	public void actionPerformed(ActionEvent e) {
+															 	}
+															 });
+															 btnVolverMesas.setBackground(new Color(128, 255, 128));
+															 btnVolverMesas.setBounds(682, 0, 152, 67);
+															 panelnvetarioComida.add(btnVolverMesas);
+															 
+															 JLabel lblError = new JLabel("");
+															 lblError.setFont(new Font("Rage Italic", Font.PLAIN, 46));
+															 lblError.setHorizontalAlignment(SwingConstants.CENTER);
+															 lblError.setBounds(161, 469, 523, 73);
+															 panelnvetarioComida.add(lblError);
+															 
+															  lblFondoInventario = new JLabel("");
+															  lblFondoInventario.setBounds(0, 0, 834, 542);
+															  panelnvetarioComida.add(lblFondoInventario);
 															
 															
 															
@@ -340,59 +458,6 @@ public class InicioSesion extends JFrame {
 															lblFondo = new JLabel("");
 															lblFondo.setBounds(0, 0, 834, 568);
 															panelBebida.add(lblFondo);
-															
-															panelnvetarioComida = new JPanel();
-															panelnvetarioComida.setBounds(0, 0, 834, 553);
-															contentPane.add(panelnvetarioComida);
-															panelnvetarioComida.setLayout(null);
-															panelnvetarioComida.setVisible(false);
-															lblNewLabel_18 = new JLabel("Nombre Prodcuto");
-															lblNewLabel_18.setFont(new Font("Rage Italic", Font.PLAIN, 54));
-															lblNewLabel_18.setBounds(151, 120, 580, 76);
-															panelnvetarioComida.add(lblNewLabel_18);
-															
-															comboBoxNombreProducto = new JComboBox();
-															comboBoxNombreProducto.setBounds(161, 195, 523, 29);
-															panelnvetarioComida.add(comboBoxNombreProducto);
-															
-															lblNewLabel_20 = new JLabel("Cantidad");
-															lblNewLabel_20.setFont(new Font("Rage Italic", Font.PLAIN, 54));
-															lblNewLabel_20.setBounds(151, 255, 580, 76);
-															panelnvetarioComida.add(lblNewLabel_20);
-															
-															textFieldCantidad = new JTextField();
-															textFieldCantidad.setBounds(161, 341, 523, 19);
-															panelnvetarioComida.add(textFieldCantidad);
-															textFieldCantidad.setColumns(10);
-															
-															btnAñadirInventario = new JButton("Añadir");
-															btnAñadirInventario.setBackground(new Color(128, 255, 128));
-															btnAñadirInventario.setBounds(162, 408, 249, 21);
-															panelnvetarioComida.add(btnAñadirInventario);
-															
-															btnEliminarInventario = new JButton("Eliminar");
-															btnEliminarInventario.setBackground(new Color(128, 255, 128));
-															btnEliminarInventario.setBounds(459, 408, 225, 21);
-															panelnvetarioComida.add(btnEliminarInventario);
-															
-															 btnVolverMesas = new JButton("Mesas");
-															btnVolverMesas.addActionListener(new ActionListener() {
-																public void actionPerformed(ActionEvent e) {
-																}
-															});
-															btnVolverMesas.setBackground(new Color(128, 255, 128));
-															btnVolverMesas.setBounds(682, 0, 152, 67);
-															panelnvetarioComida.add(btnVolverMesas);
-															
-															JLabel lblError = new JLabel("");
-															lblError.setFont(new Font("Rage Italic", Font.PLAIN, 46));
-															lblError.setHorizontalAlignment(SwingConstants.CENTER);
-															lblError.setBounds(161, 469, 523, 73);
-															panelnvetarioComida.add(lblError);
-															
-															 lblFondoInventario = new JLabel("");
-															lblFondoInventario.setBounds(0, 0, 834, 542);
-															panelnvetarioComida.add(lblFondoInventario);
 															
 															panelMesa = new JPanel();
 															panelMesa.setBackground(new Color(255, 255, 128));
@@ -700,61 +765,6 @@ public class InicioSesion extends JFrame {
 												lblFondoPanelInicio = new JLabel("");
 												lblFondoPanelInicio.setBounds(0, 0, 834, 609);
 												panelnicio.add(lblFondoPanelInicio);
-							
-							panelCrearUsuario = new JPanel();
-							panelCrearUsuario.setLayout(null);
-							panelCrearUsuario.setBackground(new Color(255, 255, 128));
-							panelCrearUsuario.setBounds(0, 0, 834, 564);
-							contentPane.add(panelCrearUsuario);
-							panelCrearUsuario.setVisible(false);
-							textFieldPanelNombreUsuario = new JTextField();
-							textFieldPanelNombreUsuario.setColumns(10);
-							textFieldPanelNombreUsuario.setBounds(268, 190, 308, 19);
-							panelCrearUsuario.add(textFieldPanelNombreUsuario);
-							
-							lblNombreUsuario = new JLabel("Nombre Usuario");
-							lblNombreUsuario.setFont(new Font("Tahoma", Font.ITALIC, 15));
-							lblNombreUsuario.setBounds(268, 167, 308, 13);
-							panelCrearUsuario.add(lblNombreUsuario);
-							
-							textFieldPanelContraseña = new JTextField();
-							textFieldPanelContraseña.setColumns(10);
-							textFieldPanelContraseña.setBounds(268, 275, 308, 19);
-							panelCrearUsuario.add(textFieldPanelContraseña);
-							
-							lblNewLabel_19 = new JLabel("Contraseña");
-							lblNewLabel_19.setFont(new Font("Tahoma", Font.ITALIC, 15));
-							lblNewLabel_19.setBounds(268, 252, 308, 13);
-							panelCrearUsuario.add(lblNewLabel_19);
-							
-							btnUsuario = new JButton("Añadir  Usuario");
-							btnUsuario.addActionListener(new ActionListener() {
-								public void actionPerformed(ActionEvent e) {
-								}
-							});
-							btnUsuario.setBackground(new Color(128, 255, 128));
-							btnUsuario.setBounds(351, 333, 145, 21);
-							panelCrearUsuario.add(btnUsuario);
-							
-							lblName_4 = new JLabel("CoffeSwtich");
-							lblName_4.setFont(new Font("Rage Italic", Font.PLAIN, 60));
-							lblName_4.setBounds(139, 32, 425, 76);
-							panelCrearUsuario.add(lblName_4);
-							
-							lblHora_1 = new JLabel("");
-							lblHora_1.setFont(new Font("Rage Italic", Font.PLAIN, 60));
-							lblHora_1.setBounds(452, 32, 290, 76);
-							panelCrearUsuario.add(lblHora_1);
-							
-							lblFalloPanelUsuario = new JLabel("");
-							lblFalloPanelUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-							lblFalloPanelUsuario.setFont(new Font("Rage Italic", Font.PLAIN, 25));
-							lblFalloPanelUsuario.setBounds(10, 426, 824, 76);
-							panelCrearUsuario.add(lblFalloPanelUsuario);
-							
-							lblFondoPanelUsuario = new JLabel("");
-							lblFondoPanelUsuario.setBounds(0, -44, 834, 653);
-							panelCrearUsuario.add(lblFondoPanelUsuario);
 	}
 
 	public void lblTextError() {
